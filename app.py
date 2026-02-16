@@ -1,18 +1,22 @@
-# app.py
+import os
 from flask import Flask, jsonify
 from flask_cors import CORS
+from dotenv import load_dotenv
 
 from blueprints.auth import auth_bp
 from blueprints.courses import courses_bp
 from blueprints.reviews import reviews_bp
 from blueprints.statistics import stats_bp
 
+load_dotenv()
+
+
 def create_app():
     app = Flask(__name__)
-    app.config["SECRET_KEY"] = "change_me_now"
+    app.config["SECRET_KEY"] = os.getenv("SECRET_KEY", "secret-key")
     CORS(app)
 
-    @app.route("/api/v1.0/health", methods=["GET"])
+    @app.get("/api/v1.0/health")
     def health():
         return jsonify({"ok": True})
 
@@ -22,6 +26,7 @@ def create_app():
     app.register_blueprint(stats_bp, url_prefix="/api/v1.0")
 
     return app
+
 
 app = create_app()
 

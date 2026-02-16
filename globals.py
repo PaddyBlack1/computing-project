@@ -1,4 +1,3 @@
-# globals.py
 import os
 from pymongo import MongoClient
 from dotenv import load_dotenv
@@ -13,4 +12,4 @@ db = client[DB_NAME]
 
 users = db.users
 courses = db.courses
-posts = db.posts
+blacklist = db.blacklist

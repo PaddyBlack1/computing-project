@@ -1,0 +1,62 @@
+.statistics-page h2 {
+  margin: 8px 0 20px;
+  font-family: var(--gb-title-font);
+  font-size: clamp(2.3rem, 3.2vw, 3.8rem);
+  font-style: italic;
+}
+
+.statistics-layout {
+  display: grid;
+  grid-template-columns: 1fr 250px;
+  gap: 30px;
+  padding: 20px;
+  background: var(--gb-card);
+  border: 1px solid rgb(0 0 0 / 10%);
+}
+
+.statistics-main h3,
+.clubs h3 {
+  margin: 0 0 10px;
+  font-size: clamp(2.2rem, 3vw, 3.8rem);
+  font-weight: 500;
+}
+
+.box {
+  min-height: 220px;
+  margin-bottom: 14px;
+  padding: 10px 12px;
+  background: var(--gb-placeholder);
+  font-size: clamp(2.3rem, 3vw, 4rem);
+}
+
+.box-lower {
+  min-height: 246px;
+}
+
+.club-head,
+.club-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.club-head {
+  margin-bottom: 8px;
+  font-size: clamp(1.7rem, 2.4vw, 2.8rem);
+}
+
+.club-row {
+  margin-bottom: 12px;
+}
+
+.club-row span {
+  display: block;
+  min-height: 45px;
+  background: var(--gb-placeholder);
+}
+
+@media (max-width: 980px) {
+  .statistics-layout {
+    grid-template-columns: 1fr;
+  }
+}

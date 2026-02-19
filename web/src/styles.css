@@ -1,0 +1,24 @@
+:root {
+  --gb-green-900: #2f5f3d;
+  --gb-green-800: #234b30;
+  --gb-green-600: #7fa484;
+  --gb-surface: #ebe7ea;
+  --gb-card: #e4e0e2;
+  --gb-placeholder: #aaaaad;
+  --gb-text: #1f1d20;
+  --gb-title-font: 'Franklin Gothic Medium', 'Trebuchet MS', sans-serif;
+  --gb-body-font: 'Century Gothic', 'Trebuchet MS', sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  color: var(--gb-text);
+  font-family: var(--gb-body-font);
+  background: radial-gradient(circle at 20% -10%, #f7f9f6 0%, #eceaed 50%, #e3e0e3 100%);
+}
